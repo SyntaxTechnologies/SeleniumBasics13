@@ -59,3 +59,10 @@ get() vs navigate()
 -- get() will wait for the page to fully load whereas navigate() will not
 -- get will not keep the history of the browser whereas navigate() will
 
+close() vs quit()
+-- close() close the current tab
+-- quit() close the whole browser
+
+fullscreen() vs maximize()
+-- maximize() will maximize the browser and you will still be able to see the control panel(back, forward, bookmarks)
+fullscreen() will maximize the whole web page
