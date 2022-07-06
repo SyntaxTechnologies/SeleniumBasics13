@@ -18,12 +18,5 @@ public class WebOrders {
         password.sendKeys("test");
         driver.findElement(By.className("button")).click();
 
-
-
-
-
-
-
-
     }
 }
