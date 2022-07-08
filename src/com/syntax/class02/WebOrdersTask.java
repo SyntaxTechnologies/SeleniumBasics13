@@ -16,7 +16,7 @@ public class WebOrdersTask {
      */
 
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
@@ -32,8 +32,8 @@ public class WebOrdersTask {
             System.out.println("Title is not correct");
         }
 
-        driver.findElement(By.linkText("Logout")).click();
-        driver.quit();
+//        driver.findElement(By.linkText("Logout")).click();
+
 
     }
 }
