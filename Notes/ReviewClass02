@@ -1,0 +1,205 @@
+************************Selenium Review 02******************
+
+
+
+
+<html>      
+	<head>  
+		<title>who am i</title>    
+	</head>
+
+	<body>   
+		<div>  
+			<label>heelo</label>
+		</div>  
+		<div>   
+			<input>enter your name</input>  ->-<- 
+		</div>
+	</body>
+</html>
+
+
+/html/body/div[2]/input
+
+
+
+
+absolute xpath:
+
+/html/head/title   -> to get the title
+
+
+/html/body/div/input  -> to get to input tag
+
+
+
+<html>      
+	<head>
+	</head>
+
+	<body>   
+		<div>    
+			<button>lol</button>
+		</div>
+		<div>
+			<input>waow</input>
+		</div>
+		<div>    
+			<form>  
+				<div>  
+					<img>asndj<img>
+				</div>
+				<div>   
+					<div>   
+						<input>enter your name</input>  ->-<-
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
+
+target: get the input
+
+/html/body/div[3]/form/div[2]/div/input
+
+
+
+----------------Relative Xpath----------------
+//tagname[@attribute='attribute value']
+
+hey driver goto the tag  "tagname" whose attribute "attribute" has a value of "attribute value"
+
+//tagname[text()='text']
+
+<html>      
+	<head>
+	</head>
+
+	<body>   
+		<div>    
+			<button>lol</button>
+		</div>
+		<div>
+			<input>waow</input>
+		</div>
+		<div>    
+			<form>  
+				<div>  
+					<input>enter your surname</input> 
+					<img>asndj<img>
+				</div>
+				<div>   
+					<div>   
+						<input  id="your message">enter your name</input> 
+					</div>
+				</div>
+				  <input>enter your surname1</input> 
+			</form>
+		</div>
+	</body>
+</html>
+
+xpath:
+task : get the webelement <input  id="your message">enter your name</input>
+//input[@id="your message"]
+hey driver get me the tag "input" which has an attribute "id" whose value is "your message".
+
+task: get the webelement <input>enter your surname</input> 
+//input[text()='enter your surname']
+
+hey driver get me the tag "input" which has text "enter your surname"
+
+
+task:get the webElement  <input>enter your surname1</input> 
+//input[contains(text(),"enter your surname")]
+hey driver get me the tag input which contains the text "enter your surname"
+
+identifying elements by using contains method:
+//tagname[contains(@attribute, 'partial attribute value')]
+
+
+-----------------------advance Xpath----------------------------
+
+<form t="19048 aa">
+	<div>
+		<label name="myid"/>  -<->-  
+		<input t="ad 123 34"/>
+    	<label name="id"/>   
+		<input t="added into 1234"/>
+	<div>
+</form>
+
+
+
+
+
+advance xpath:
+get to the nearest sibling or parent or ancestor  which is uniquley accessible
+then acces your desired tag.
+
+following-sibling example:
+//label[@name='myid']/following-sibling::input
+
+hey driver get me the tag "label" which has attribute "name" whose value is "myid"
+AND THEN
+get me its following-sibling which has a tagname of  "input"
+
+
+preceding-sibling example:
+//label[@name= 'id']/preceding-sibling::input
+
+hey driver get me the tag "label" which has attribute "name" whose value is "id"
+AND THEN
+get me its preceding-sibling which has a tagname of  "input"
+
+
+parent example:
+
+//label[@name='myid']/parent::div
+hey driver get me the tag "label" which has attribute "name" whose value is "myid"
+AND THEN
+get me its parent which has a tagname of  "div"
+
+
+ancestor example:
+//label[@name='myid']/ancestor::form
+
+hey driver get me the tag "label" which has attribute "name" whose value is "myid"
+AND THEN
+get me its ancestor which has a tagname of  "form"
+
+
+
+
+using and operator on the xpath
+ //input[@id='user_phone' and @name="phone"]
+
+ hey driver find a tagname  "input" which has an attribute id with value 'userphone' AND also
+ an attribute name with value "phone".
+
+
+-------------------------CSS Selectors------------------
+
+Syntax:
+tagname[attribute="value"]       where as in xpath the syntax is //tagname[@attribute="value"]
+
+
+in css we have  short cuts
+so e.g
+the css:
+input[id='user_phone'] can be written as
+
+input#userphone   where # stands for id
+
+
+the css:
+
+input[className='user_phone'] can be written as
+
+input.user_phone where . stands for className
+
+
+contains method:
+tagname[attribute *='partial value']
+
