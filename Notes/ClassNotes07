@@ -1,0 +1,52 @@
+Selenium Class 7
+
+Handling multiple windows (tabs):
+In order to handle multiple windows we will be using:
+getWindowHandle()
+getWindowHandles()
+
+WindowHandle:
+is a unique ID that holds the address of the window or a tab
+It is approximately a 40 alphanumeric character ID
+
+the original page where you navigate will be called parent handle
+and additional tab opened afterwards will be called child handle
+
+Most of the time when you interact with links they will open a new tab or a window
+
+Synchronization:
+is the process of bringing the speed of two or more components to the same level
+in this case we are bringing our script and page load to the same speed level
+
+Thread.sleep() -- static wait / unconditional wait
+
+Types of selenium waits:
+Implicit wait
+Explicit wait
+Fluent wait
+
+Implicit Wait:
+it tells the webdriver to wait until certain amount of time before throwing an exception
+it will only be written once and will be applied to the whole session of the execution
+We can say the Implicit wait is a global wait
+
+IMplicit wait works with findElement() method
+
+Implicit wait is usually set for 20 seconds. If your element is found in any time between the given time
+the remaining time will be ignored and your script will move on to the next line or to the next step
+
+If the element is not found in a given time, ONLY then you will get an exception
+
+HW
+Go to https://demoqa.com/browser-windows
+click on New Tab and print the text from new tab in the console
+click on New Window and print the text from new window in the console
+click on New Window Message and print the text from new window in the console
+Verify (compare) the titles for each page
+Print out the title of the all pages
+
+HW
+navigate to http://www.uitestpractice.com/Students/Contact
+click on the link
+get text
+print out in the console
