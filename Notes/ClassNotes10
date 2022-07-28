@@ -1,0 +1,39 @@
+Selenium Class 10
+
+Calendars
+Calendars are also called as date-pickers
+
+How to Handle Calendar:
+1. Click on the calendar
+2. locate the month and get text
+3. if the desired text is not visible --> we will keep clicking on next and keep updating month text
+4. as soon as we find our desired text --> grab all the cells from the table
+5. loop through the cells
+6. once the cell value is matched with our condition --> click on the mathced date
+
+Why do we need screenshots in testing?
+in testing it is very important to take screenshots in order to prove that our tests
+covered certain functionality
+
+in selenium in order to take screenshot we will be using
+TakesScreenshot interface
+
+HW
+Go to http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login
+click on leave
+click on leave list
+choose from "From calendar"
+choose from "To calendar"
+click only on cancelled and rejected checkboxes
+uncheck Pending Approval
+select IT support from DD
+click search
+quit the browser
+
+HW
+Go to aa.com/homePage.do
+select depart date
+select return date
+select destination
+click on search
+quit the browser
