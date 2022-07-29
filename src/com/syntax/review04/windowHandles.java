@@ -28,7 +28,7 @@ public class windowHandles {
         helpBtn.click();
         privacyBtn.click();
         termsBtn.click();
-        String privacyPageHandle=null;
+      
 //        get the main page handle and print on the screen
         String mainPagehandle = driver.getWindowHandle();
         System.out.println("The main Page Handle is "+mainPagehandle);
@@ -51,22 +51,14 @@ public class windowHandles {
 //              7.make sure the title is that of the privacy page
                 if (title.contains("Privacy Policy – Privacy & Terms – Google")) {
                     System.out.println(title);
-                    privacyPageHandle = handle;
+
                     break;
                 }
 
 
-                driver.switchTo().defaultContent();
-                driver.switchTo().window(privacyPageHandle);
             }
 
           }
-
-
-
-
-
-
 
 
 
