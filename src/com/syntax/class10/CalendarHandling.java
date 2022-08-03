@@ -40,7 +40,7 @@ public class CalendarHandling {
         List<WebElement> fromDates = driver.findElements(By.xpath("//table[@class = 'ui-datepicker-calendar']/tbody/tr/td"));
         for(WebElement fromDate: fromDates) {
             String dateText = fromDate.getText();
-            if(dateText.equals("15")) {
+            if (dateText.equals("15")) {
                 fromDate.click();
                 break;
             }
